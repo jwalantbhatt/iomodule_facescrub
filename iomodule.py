@@ -1,3 +1,4 @@
+# imports
 import urllib2
 import cv2
 import os
@@ -36,7 +37,7 @@ if not os.path.isdir(my_pathten):
 # initialize counters
 
 n = 20          # no of training images
-m = 10           # no of testing images
+m = 10          # no of testing images
 count = 1
 x = 0
 skip = 0
@@ -88,7 +89,7 @@ while(count < n+m+1):
     elif x % 4 == 2:
         crop_imgn = image[int(bb[3]):, :int(bb[0])]
     else:
-        crop_imgn = image[int(bb[3]):,int(bb[2]):]
+        crop_imgn = image[int(bb[3]):, int(bb[2]):]
     resized_imagen = cv2.resize(crop_imgn, (60, 60))
     cv2.imwrite(fstrn, resized_imagen) 
    
@@ -97,5 +98,5 @@ while(count < n+m+1):
     print ("skipped: %d" %x)
     skip += 1
     
-print("total iamges skipped = %d" %skip)
+print("total images skipped = %d" %skip)
 
