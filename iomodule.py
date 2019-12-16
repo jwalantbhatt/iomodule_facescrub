@@ -1,4 +1,4 @@
-# imports jjjjjj
+# imports jjjjjjj
 import urllib2
 import cv2
 import os
